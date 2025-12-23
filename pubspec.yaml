@@ -1,0 +1,48 @@
+name: pokoplus
+description: Asistente virtual para actividades del hogar orientado a niños.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.10.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  go_router: ^17.0.1      # Navegación entre pantallas
+  crypto: ^3.0.3
+  fl_chart: ^1.1.1      # Gráficos para reportes de progreso
+
+  # --- PILAR: EL BUDDY (Animaciones Interactivas) ---
+  rive: ^0.14.0          # Para el personaje animado interactivo
+
+  # --- PILAR: VOZ Y SONIDO ---
+  flutter_tts: ^4.2.3    # El asistente habla al niño
+  speech_to_text: ^7.3.0 # El niño responde por voz
+  audioplayers: ^6.5.1   # Efectos de sonido (aplausos, campanas)
+
+  # --- PILAR: GAMIFICACIÓN Y UI ---
+  confetti: ^0.8.0       # Celebración al completar tareas
+  percent_indicator: ^4.2.3 # Barras de progreso visuales
+  google_fonts: ^6.3.3   # Tipografías legibles y amigables
+
+  # --- INFRAESTRUCTURA ---
+  provider: ^6.0.5       # Gestión de estado (o Riverpod si prefieres)
+  shared_preferences: ^2.2.0 # Guardar progreso del usuario localmente
+  intl: ^0.20.2          # Formato de fechas y reportes
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0  # Mejores prácticas de código
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/bienvenido.jpg
+    - assets/images/housework.jpg
+    - assets/images/logo.jpg
+    - assets/images/no_user.jpg
+    # - assets/animations/ (Recomendado para archivos Rive/Lottie)
